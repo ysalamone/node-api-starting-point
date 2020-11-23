@@ -4,11 +4,11 @@
   "description": "node api template",
   "main": "dist/index.js",
   "scripts": {
-    "test": "test",
-    "build": "rm -rf dist && NODE_ENV=development webpack",
+    "build": "rm -rf dist && cross-env NODE_ENV=development webpack",
     "dev": "yarn watch",
-    "watch": "rm -rf dist && NODE_ENV=development webpack -w & nodemon",
-    "start": "node dist/index.js"
+    "watch-build":"rm -rf dist && cross-env NODE_ENV=development webpack -w",
+    "watch": "npm-run-all --parallel watch-build start",
+    "start": "nodemon dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -45,8 +45,10 @@
   },
   "dependencies": {
     "body-parser": "1.19.0",
+    "cross-env": "^7.0.2",
     "dotenv": "8.2.0",
     "express": "4.17.1",
-    "mongoose": "5.9.22"
+    "mongoose": "5.9.22",
+    "npm-run-all": "^4.1.5"
   }
 }

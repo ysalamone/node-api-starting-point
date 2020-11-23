@@ -1,1 +1,1 @@
-console.log('entry points yay !');
+console.log("C'est pas faux");
