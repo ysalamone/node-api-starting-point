@@ -10,7 +10,7 @@ const Comment: Schema = new Schema({
 });
 
 const pubSchema: ICustomSchema = {
-    collection: 'bars',
+    collection: 'pubs',
     definition: new Schema({
         name: { type: String, required: true },
         description: { type: String, required: false },

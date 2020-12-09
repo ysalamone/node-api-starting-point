@@ -3,5 +3,5 @@ import pubs from './pubs';
 
 export default (app: Application): void => {
     app.use('/pubs', pubs);
-    // app.use('/barathon', barathon);
+    // app.use('/barathons', barathon);
 };
