@@ -15,7 +15,7 @@
     "url": "git+https://github.com/Chayuan/node-api-template.git"
   },
   "keywords": [
-    "node",
+    "node", 
     "api",
     "template",
     "rest"
