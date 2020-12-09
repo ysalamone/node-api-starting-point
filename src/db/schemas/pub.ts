@@ -1,14 +1,7 @@
 // src/db/schemas/pub.ts
 import { Schema } from 'mongoose';
 import { ICustomSchema } from '../../types/database';
-
-// Comment à une structure un peu complexe, il mérite son propre schéma
-const Comment: Schema = new Schema({
-    text: { type: String, required: true },
-    author: { type: String, required: true },
-    date: { type: String, required: true },
-    rating: { type: Number, required: true }
-});
+import Comment from './comment';
 
 // nous n'exportons pas un schémas, mais un ICustomSchema
 // notre surcouche custom au schema mongoose

@@ -5,5 +5,6 @@
 // et les exporter dans un seul et même object
 
 import pub from './pub';
+import barathon from './barathon';
 
-export default { pub };
+export default { pub, barathon };
