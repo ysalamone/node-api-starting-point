@@ -8,10 +8,9 @@ const router = Router();
 router.get('/', async (req: Request, res: Response): Promise<void> => {
     const pubModel = getModel('pub');
 
+    // find sans paramètre renvoie l'ensemble des documents de la collection
     const pubs = await pubModel.find();
     res.json(pubs);
 });
-
-// router.get('/{pubId}', () => )
 
 export default router;
