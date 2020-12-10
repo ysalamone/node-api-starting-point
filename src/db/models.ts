@@ -1,3 +1,4 @@
+// src/db/models.ts
 import { Model } from 'mongoose';
 import { ICustomSchema } from '../types/database';
 import { database } from './index';
@@ -5,6 +6,7 @@ import schemas from './schemas';
 
 const initializedModels = {};
 
+// nous renvoies les models mongoose, les initialise si pas déjà fait
 const getModel = (modelName: string): Model => {
     // si en mémoire == > version en mémoire)
     if (initializedModels[modelName]) {
